@@ -53,14 +53,16 @@ def clr():
 def bann_text():
     clr()
     logo = """
-   ████████ █████                 ██
-   ▒▒▒██▒▒▒ ██▒▒██                ██
-      ██    ██  ██        ██   ██ ██
-      ██    █████▒  ████  ███ ███ █████
-      ██    ██▒▒██ ██  ██ ██▒█▒██ ██▒▒██
-      ██    ██  ██ ██  ██ ██ ▒ ██ ██  ██
-      ██    █████▒ ▒████▒ ██   ██ █████▒
-      ▒▒    ▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒
+ _______  ______  ______  __    __  ______  __    __ _______  __    __ 
+|       \|      \/      \|  \  |  \/      \|  \  |  \       \|  \  |  \
+| ▓▓▓▓▓▓▓\\▓▓▓▓▓▓  ▓▓▓▓▓▓\ ▓▓  | ▓▓  ▓▓▓▓▓▓\ ▓▓  | ▓▓ ▓▓▓▓▓▓▓\ ▓▓  | ▓▓
+| ▓▓__| ▓▓ | ▓▓ | ▓▓   \▓▓ ▓▓__| ▓▓ ▓▓ __\▓▓ ▓▓  | ▓▓ ▓▓__| ▓▓ ▓▓  | ▓▓
+| ▓▓    ▓▓ | ▓▓ | ▓▓     | ▓▓    ▓▓ ▓▓|    \ ▓▓  | ▓▓ ▓▓    ▓▓ ▓▓  | ▓▓
+| ▓▓▓▓▓▓▓\ | ▓▓ | ▓▓   __| ▓▓▓▓▓▓▓▓ ▓▓ \▓▓▓▓ ▓▓  | ▓▓ ▓▓▓▓▓▓▓\ ▓▓  | ▓▓
+| ▓▓  | ▓▓_| ▓▓_| ▓▓__/  \ ▓▓  | ▓▓ ▓▓__| ▓▓ ▓▓__/ ▓▓ ▓▓  | ▓▓ ▓▓__/ ▓▓
+| ▓▓  | ▓▓   ▓▓ \\▓▓    ▓▓ ▓▓  | ▓▓\▓▓    ▓▓\▓▓    ▓▓ ▓▓  | ▓▓\▓▓    ▓▓
+ \▓▓   \▓▓\▓▓▓▓▓▓ \▓▓▓▓▓▓ \▓▓   \▓▓ \▓▓▓▓▓▓  \▓▓▓▓▓▓ \▓▓   \▓▓ \▓▓▓▓▓▓ 
+
                                          """
     if ASCII_MODE:
         logo = ""
@@ -115,13 +117,13 @@ def do_zip_update():
         except Exception:
             mesgdcrt.FailureMessage("Error occured while extracting !!")
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("TRICHGURU was updated to the latest version")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update TRICHGURU.")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one From https://github.com/Darulagega/TBOMB.git")
 
     sys.exit()
 
@@ -146,16 +148,16 @@ def do_git_update():
     print("\n")
 
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("TRICHGURU was updated to the latest version")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update TRICHGURU.")
         mesgdcrt.WarningMessage("Make Sure To Install 'git' ")
         mesgdcrt.GeneralMessage("Then run command:")
         print(
             "git checkout . && "
-            "git pull https://github.com/TheSpeedX/TBomb.git HEAD")
+            "git pull https://github.com/Darulagega/TBOMB.git HEAD")
     sys.exit()
 
 
@@ -180,8 +182,8 @@ def check_for_updates():
         mesgdcrt.GeneralMessage("Starting update...")
         update()
     else:
-        mesgdcrt.SuccessMessage("TBomb is up-to-date")
-        mesgdcrt.GeneralMessage("Starting TBomb")
+        mesgdcrt.SuccessMessage("TRICHGURU is up-to-date")
+        mesgdcrt.GeneralMessage("Starting TRICHGURU")
 
 
 def notifyen():
@@ -310,7 +312,7 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 500, "call": 15, "mail": 200}
+        max_limit = {"sms": 5000, "call": 1500, "mail": 200000}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
